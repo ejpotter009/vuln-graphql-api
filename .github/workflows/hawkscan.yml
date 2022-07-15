@@ -1,8 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
 name: HawkScan
-
-# Controls when the workflow will run
 on:
   push:
 jobs:
@@ -13,10 +9,10 @@ jobs:
       - name: Clone repo
         uses: actions:checkout@v2
       - name: Build and run vuln-graphql-api
-        run:
+        run: >
           SERVER_PORT=3000
           docker-compose up --build --detach
       - name: Run HackScan
-        uses: stackhawk/hawkscan-action@v2.5.0
+        uses: stackhawk/hawkscan-action@v1.3.0
         with:
           apiKey: ${{ secrets.HAWK_API_KEY }}

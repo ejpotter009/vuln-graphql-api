@@ -1,6 +1,6 @@
 app:
   applicationId: e13eb6ab-0fb9-4591-a120-bed32b187357 # (required)
-  env: Development
+  env: Github-Actions
   host: http://localhost:3000
 
   graphqlConf:

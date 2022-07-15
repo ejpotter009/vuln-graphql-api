@@ -13,7 +13,7 @@ jobs:
       - name: Clone repo
         uses: actions:checkout@v2
       - name: Build and run vuln-graphql-api
-        run:
+        run: >
           SERVER_PORT=3000
           docker-compose up --build --detach
       - name: Run HackScan

@@ -4,7 +4,7 @@ on:
 jobs:
   hawkscan:
     name: HawkScan
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Clone repo
         uses: actions/checkout@v2
@@ -13,6 +13,6 @@ jobs:
           SERVER_PORT=3000
           docker-compose up --build --detach
       - name: Run HackScan
-        uses: stackhawk/hawkscan-action@v1.3.0
+        uses: stackhawk/hawkscan-action@v2.0.0
         with:
           apiKey: ${{ secrets.HAWK_API_KEY }}

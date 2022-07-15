@@ -18,5 +18,3 @@ app:
     filePath: ""
   autoPolicy: true
   autoInputVectors: true
-hawk:
-  failureThreshold: high
